@@ -1,11 +1,12 @@
 const divProjetos = document.getElementById('divProjetos');
+const btnMenu = document.getElementById('btnMenu');
 
 const projetos = [
     {
-        "imagem":"./src/img/LucasFoto.png",
-        "titulo":"TESTE LUCAS",
-        "descricao":"oiahsbdoiahsd joihpsoidhpaoshd huioashdjpo ahsopdhpoauihsd ophpashd poa",
-        "tecnologias":["React", "Node.js", "PHP", "MySQL"],
+        "imagem":"./src/img/WalletVisionPrototipo.png",
+        "titulo":"Wallet Vision",
+        "descricao":"Sistema capás de controlar o fluxo de dinheiro de uma pessoa. Com o Wallet Vision vocé pode gerenciar suas financas de uma maneira simples e eficiente.",
+        "tecnologias":["Next.js", "TailwindCSS", "PHP", "MySQL", "Java"],
         "pagina": 1
     }
 ];
@@ -26,8 +27,12 @@ document.getElementById('btnSobre').addEventListener('click', () => {
     scrollTo('sobre');
 });
 
+document.getElementById('btnMenu').addEventListener('click', () => {
+    alert('Em breve');
+});
+
 projetos.forEach(e => {
-    divProjetos.innerHTML += `<div class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-slate-800/50"><div class="relative h-56 w-full"><div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105"
+    divProjetos.innerHTML += `<div class="cursor-default group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-slate-800/50"><div class="relative h-56 w-full"><div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105"
 style='background-image: url(${e.imagem});'>
 </div>
 </div>
