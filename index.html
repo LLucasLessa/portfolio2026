@@ -1,39 +1,17 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html class="dark" lang="pt-br">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Stitch Design</title>
-    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <title>LLucas.dev</title>
+    <link rel="icon" type="image/png" href="./src/img/iconeLogo.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
         rel="stylesheet" />
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#1173d4",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        display: ["Inter"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.25rem",
-                        lg: "0.5rem",
-                        xl: "0.75rem",
-                        full: "9999px",
-                    },
-                },
-            },
-        };
-    </script>
+    <script src="./tailwindConfig.js"></script>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
@@ -44,27 +22,21 @@
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center gap-4">
                         <a class="flex items-center gap-2 text-gray-900 dark:text-white" href="#">
-                            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path clip-rule="evenodd"
-                                    d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-lg font-bold">Portfolio</span>
+                            <img class="w-8 h-8" src="./src/img/iconeLogo.png">
+                            <span class="text-lg font-bold">LLucas.dev</span>
                         </a>
                     </div>
                     <nav class="hidden md:flex items-center gap-8">
                         <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                            href="#">About</a>
+                            id="btnSobre">Sobre</a>
                         <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                            href="#">Projects</a>
+                            id="btnProjetos">Projetos</a>
                         <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                            href="#">Contact</a>
+                            id="btnHabilidades">Habilidades</a>
+                        <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            id="btnContato">Vamos Conversar</a>
                     </nav>
                     <div class="flex items-center gap-4">
-                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBW6aWVMR5F8EIq94UD5zfFigg4ThfbzupTM0VffSk2MP97OzUc_mE2BzRh80uIVb7pcTD3bPUolu-YFeOjt6ZzBqCFPetyerq7KDl8_pK8MFLQqv5IARPvc-OYVlRdXrl9JRZLkM5YDHvFk2vf-3blM2YqG7j0wUD9uHHFeiKy5xEYq8EBiewD1onCICUVR4ZhdT1MzgTxutvsBfO_5tIOegsmENwGsZJMdYuw1gMwezExQtVTMF4masOldepBSzsPyxVnDEY-BWs");'>
-                        </div>
                         <button
                             class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -77,28 +49,29 @@
                 </div>
             </div>
         </header>
-        <main class="flex-grow">
+        <main class="flex-grow" id="sobre">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    <div class="flex flex-col gap-6 text-center lg:text-left">
+                    <div class="flex flex-col gap-6 text-center lg:text-left" >
                         <h1
                             class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-gray-900 dark:text-white">
                             Full-Stack Developer</h1>
                         <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0">
-                            I'm a passionate full-stack developer with a focus on creating innovative and user-friendly
-                            web applications. I bring a holistic approach to software
-                            development, ensuring seamless integration and optimal performance.
+                            Sou um desenvolvedor full-stack com foco na criação de aplicações web modernas, eficientes e
+                            centradas na experiência do usuário.
+                            Busco entregar soluções inovadoras por meio de uma visão completa do desenvolvimento de
+                            software, garantindo integração fluida, alto desempenho e qualidade em cada projeto.
                         </p>
                         <div class="flex justify-center lg:justify-start">
                             <button
-                                class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors shadow-lg">
-                                View Projects
+                                class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors shadow-lg" id="btnChecarProjetos">
+                                Checar Projetos
                             </button>
                         </div>
                     </div>
                     <div class="relative w-full aspect-square max-w-md mx-auto lg:max-w-none lg:mx-0">
                         <div class="absolute inset-0 bg-center bg-no-repeat bg-cover rounded-xl shadow-2xl"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8HiHMG5y1M_chqaqtWPK8pjryfWzsbzK4lKtYOTmFqXhhK8RE38ef0O8CMHdCwoPPyafw0SS5XuGv0za4HioCnIotOuUQEl5bT8OFcNnVtpqIgGAm15-ELE1CCZUU0qxhNuT93Arcw-TrpeyDgkoaW7gf8vR7RDJNmzC_OzWxJFcMWeA5ILFwWP0gWsXgUgtO1K7F8I03YbBvWBmafeFgj9N5yOnfaBuvg5n0MgrVDNvKl2VZI77Z8B5t2V7B6i6HrbH-sg4aB1s");'>
+                            style='background-image: url("./src/img/LucasFoto.png");'>
                         </div>
                     </div>
                 </div>
@@ -106,19 +79,19 @@
         </main>
     </div>
 
-    <div class="min-h-screen w-full">
+    <div class="min-h-screen w-full" id="habilidades">
         <div class="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-4xl">
                 <div class="text-center mb-12">
                     <h1
                         class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
-                        Skills &amp; <span class="text-primary">Experience</span>
+                        Habilidades &amp; <span class="text-primary">Experiências</span>
                     </h1>
                     <p
                         class="mt-3 max-w-md mx-auto text-base text-gray-500 dark:text-gray-400 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                        I bring a wealth of experience in full-stack development, with a strong foundation in both
-                        front-end and back-end technologies. My expertise spans various frameworks, languages, and
-                        tools, allowing me to create robust, scalable, and user-friendly applications.
+                        Possuo experiência em desenvolvimento full-stack, com experiência em tecnologias de front-end e
+                        back-end. Desenvolvendo com diferentes frameworks, linguagens e ferramentas, o que me permite
+                        criar aplicações robustas, escaláveis e centradas na melhor experiência do usuário.
                     </p>
                 </div>
                 <div class="space-y-12">
@@ -129,63 +102,28 @@
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M223.68,66.15,135.68,18a15.94,15.94,0,0,0-15.36,0l-88,48.18a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM168,152v50.09l-32,17.52V132.74l80-43.8v32l-43.84,24A8,8,0,0,0,168,152Zm-84.16-7L40,121v-32l80,43.8v86.87L88,202.09V152A8,8,0,0,0,83.84,145Zm-.7-88.41,41,22.45a8,8,0,0,0,7.68,0l41-22.45,34.48,18.87L128,118.88,48.66,75.44ZM128,32h0l28.2,15.44L128,62.89,99.8,47.45ZM40,139.22l32,17.52v36.59L40,175.82Zm144,54.11V156.74l32-17.52v36.6Z">
-                                    </path>
-                                </svg>
+                                <img src="./src/img/react.png">
                                 <p class="font-semibold text-gray-700 dark:text-gray-300">React</p>
                             </div>
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M227.08,64.62l-96-40a7.93,7.93,0,0,0-6.16,0l-96,40a8,8,0,0,0-4.85,8.44l16,120a8,8,0,0,0,4.35,6.1l80,40a8,8,0,0,0,7.16,0l80-40a8,8,0,0,0,4.35-6.1l16-120A8,8,0,0,0,227.08,64.62ZM200.63,186.74,128,223.06,55.37,186.74,40.74,77,128,40.67,215.26,77ZM121,84.12l-40,72a8,8,0,1,0,14,7.76L106,144H150l11,19.88a8,8,0,1,0,14-7.76l-40-72a8,8,0,0,0-14,0ZM141.07,128H114.93L128,104.47Z">
-                                    </path>
-                                </svg>
-                                <p class="font-semibold text-gray-700 dark:text-gray-300">Angular</p>
-                            </div>
-                            <div
-                                class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" height="24px"
-                                    viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M227.08,64.62l-96-40a7.93,7.93,0,0,0-6.16,0l-96,40a8,8,0,0,0-4.85,8.44l16,120a8,8,0,0,0,4.35,6.1l80,40a8,8,0,0,0,7.16,0l80-40a8,8,0,0,0,4.35-6.1l16-120A8,8,0,0,0,227.08,64.62ZM200.63,186.74,128,223.06,55.37,186.74,40.74,77,128,40.67,215.26,77ZM121,84.12l-40,72a8,8,0,1,0,14,7.76L106,144H150l11,19.88a8,8,0,1,0,14-7.76l-40-72a8,8,0,0,0-14,0ZM141.07,128H114.93L128,104.47Z">
-                                    </path>
-                                </svg>
-                                <p class="font-semibold text-gray-700 dark:text-gray-300">Vue.js</p>
-                            </div>
-                            <div
-                                class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M128,152a8,8,0,0,1-8,8h-8v48a8,8,0,0,1-16,0V160H88a8,8,0,0,1,0-16h32A8,8,0,0,1,128,152Zm-64-8a8,8,0,0,0-8,8v20H40V152a8,8,0,0,0-16,0v56a8,8,0,0,0,16,0V188H56v20a8,8,0,0,0,16,0V152A8,8,0,0,0,64,144Zm176,56H228V152a8,8,0,0,0-16,0v56a8,8,0,0,0,8,8h20a8,8,0,0,0,0-16Zm-45.86-55.71a8,8,0,0,0-9,3.59L168,176.45l-17.14-28.57A8,8,0,0,0,136,152v56a8,8,0,0,0,16,0V180.88l9.14,15.24a8,8,0,0,0,13.72,0L184,180.88V208a8,8,0,0,0,16,0V152A8,8,0,0,0,194.14,144.29ZM208,120a8,8,0,0,1-8-8V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24A8,8,0,0,1,208,120ZM188.69,80,160,51.31V80Z">
-                                    </path>
-                                </svg>
+                                <img src="./src/img/html.png">
                                 <p class="font-semibold text-gray-700 dark:text-gray-300">HTML5</p>
                             </div>
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M48,180c0,11,7.18,20,16,20a14.24,14.24,0,0,0,10.22-4.66A8,8,0,1,1,85.77,206.4,30,30,0,0,1,64,216c-17.65,0-32-16.15-32-36s14.35-36,32-36a30,30,0,0,1,21.77,9.6,8,8,0,1,1-11.55,11.06A14.24,14.24,0,0,0,64,160C55.18,160,48,169,48,180Zm79.6-8.69c-4-1.16-8.14-2.35-10.45-3.84-1.26-.81-1.23-1-1.12-1.9a4.54,4.54,0,0,1,2-3.67c4.6-3.12,15.34-1.73,19.83-.56a8,8,0,0,0,4.07-15.48c-2.12-.55-21-5.22-32.83,2.76a20.55,20.55,0,0,0-9,14.95c-2,15.88,13.64,20.41,23,23.11,12.07,3.49,13.13,4.92,12.78,7.59-.31,2.41-1.26,3.34-2.14,3.93-4.6,3.06-15.17,1.56-19.55.36a8,8,0,0,0-4.3,15.41,61.23,61.23,0,0,0,15.18,2c5.83,0,12.3-1,17.49-4.46a20.82,20.82,0,0,0,9.19-15.23C154,179,137.48,174.17,127.6,171.31Zm64,0c-4-1.16-8.14-2.35-10.45-3.84-1.25-.81-1.23-1-1.12-1.9a4.54,4.54,0,0,1,2-3.67c4.6-3.12,15.34-1.73,19.82-.56a8,8,0,0,0,4.07-15.48c-2.11-.55-21-5.22-32.83,2.76a20.58,20.58,0,0,0-8.95,14.95c-2,15.88,13.65,20.41,23,23.11,12.06,3.49,13.12,4.92,12.78,7.59-.31,2.41-1.26,3.34-2.15,3.93-4.6,3.06-15.16,1.56-19.54.36A8,8,0,0,0,173.93,214a61.34,61.34,0,0,0,15.19,2c5.82,0,12.3-1,17.49-4.46a20.81,20.81,0,0,0,9.18-15.23C218,179,201.48,174.17,191.59,171.31ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,1,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.68L160,51.31Z">
-                                    </path>
-                                </svg>
+                                <img src="./src/img/css.png">
                                 <p class="font-semibold text-gray-700 dark:text-gray-300">CSS3</p>
                             </div>
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40v72a8,8,0,0,0,16,0V40h88V88a8,8,0,0,0,8,8h48V216H176a8,8,0,0,0,0,16h24a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160Zm-12.19,145a20.82,20.82,0,0,1-9.19,15.23C133.43,215,127,216,121.13,216a61.34,61.34,0,0,1-15.19-2,8,8,0,0,1,4.31-15.41c4.38,1.2,15,2.7,19.55-.36.88-.59,1.83-1.52,2.14-3.93.34-2.67-.71-4.1-12.78-7.59-9.35-2.7-25-7.23-23-23.11a20.56,20.56,0,0,1,9-14.95c11.84-8,30.71-3.31,32.83-2.76a8,8,0,0,1-4.07,15.48c-4.49-1.17-15.23-2.56-19.83.56a4.54,4.54,0,0,0-2,3.67c-.12.9-.14,1.09,1.11,1.9,2.31,1.49,6.45,2.68,10.45,3.84C133.49,174.17,150.05,179,147.81,196.31ZM80,152v38a26,26,0,0,1-52,0,8,8,0,0,1,16,0,10,10,0,0,0,20,0V152a8,8,0,0,1,16,0Z">
-                                    </path>
-                                </svg>
+                                <img src="./src/img/js.png">
                                 <p class="font-semibold text-gray-700 dark:text-gray-300">JavaScript</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
+                                <img src="./src/img/bootstrap.png">
+                                <p class="font-semibold text-gray-700 dark:text-gray-300">Bootstrap</p>
                             </div>
                         </div>
                     </div>
@@ -196,90 +134,35 @@
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M227.08,64.62l-96-40a7.93,7.93,0,0,0-6.16,0l-96,40a8,8,0,0,0-4.85,8.44l16,120a8,8,0,0,0,4.35,6.1l80,40a8,8,0,0,0,7.16,0l80-40a8,8,0,0,0,4.35-6.1l16-120A8,8,0,0,0,227.08,64.62ZM200.63,186.74,128,223.06,55.37,186.74,40.74,77,128,40.67,215.26,77ZM121,84.12l-40,72a8,8,0,1,0,14,7.76L106,144H150l11,19.88a8,8,0,1,0,14-7.76l-40-72a8,8,0,0,0-14,0ZM141.07,128H114.93L128,104.47Z">
-                                    </path>
-                                </svg>
+                                <img src="./src/img/nodejs.png">
                                 <p class="font-semibold text-gray-700 dark:text-gray-300">Node.js</p>
                             </div>
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M235.79,89l-104-56a8,8,0,0,0-7.58,0l-104,56A8,8,0,0,0,16,96v64a8,8,0,0,0,4.21,7.05l104,56a8,8,0,0,0,7.58,0l104-56A8,8,0,0,0,240,160V96A8,8,0,0,0,235.79,89ZM224,146.61,189.45,128,224,109.39Zm-51.43-27.7L136,99.22V53.39L215.13,96Zm-44.57,24L100.3,128,128,113.09,155.7,128Zm-8-89.52V99.22L83.43,118.91,40.87,96Zm-88,56L66.55,128,32,146.61Zm51.43,27.7L120,156.78v45.83L40.87,160ZM136,202.61V156.78l36.57-19.69L215.13,160Z">
-                                    </path>
-                                </svg>
-                                <p class="font-semibold text-gray-700 dark:text-gray-300">Python</p>
+                                <img src="./src/img/php.png">
+                                <p class="font-semibold text-gray-700 dark:text-gray-300">PHP</p>
                             </div>
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M176,156a12,12,0,1,1-12-12A12,12,0,0,1,176,156ZM92,144a12,12,0,1,0,12,12A12,12,0,0,0,92,144Zm148,24v24a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V169.13A113.38,113.38,0,0,1,51.4,86.72L26.34,61.66A8,8,0,0,1,37.66,50.34L63.82,76.5a111.43,111.43,0,0,1,128.55-.19l26-26a8,8,0,0,1,11.32,11.32L204.82,86.5c.75.71,1.5,1.43,2.24,2.17A111.25,111.25,0,0,1,240,168Zm-16,0a96,96,0,0,0-96-96h-.34C74.91,72.18,32,115.75,32,169.13V192H224Z">
-                                    </path>
-                                </svg>
-                                <p class="font-semibold text-gray-700 dark:text-gray-300">Java</p>
-                            </div>
-                            <div
-                                class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M128,24C74.17,24,32,48.6,32,80v96c0,31.4,42.17,56,96,56s96-24.6,96-56V80C224,48.6,181.83,24,128,24Zm80,104c0,9.62-7.88,19.43-21.61,26.92C170.93,163.35,150.19,168,128,168s-42.93-4.65-58.39-13.08C55.88,147.43,48,137.62,48,128V111.36c17.06,15,46.23,24.64,80,24.64s62.94-9.68,80-24.64ZM69.61,53.08C85.07,44.65,105.81,40,128,40s42.93,4.65,58.39,13.08C200.12,60.57,208,70.38,208,80s-7.88,19.43-21.61,26.92C170.93,115.35,150.19,120,128,120s-42.93-4.65-58.39-13.08C55.88,99.43,48,89.62,48,80S55.88,60.57,69.61,53.08ZM186.39,202.92C170.93,211.35,150.19,216,128,216s-42.93-4.65-58.39-13.08C55.88,195.43,48,185.62,48,176V159.36c17.06,15,46.23,24.64,80,24.64s62.94-9.68,80-24.64V176C208,185.62,200.12,195.43,186.39,202.92Z">
-                                    </path>
-                                </svg>
-                                <p class="font-semibold text-gray-700 dark:text-gray-300">Databases</p>
+                                <img src="./src/img/mysql.png">
+                                <p class="font-semibold text-gray-700 dark:text-gray-300">Mysql</p>
                             </div>
                         </div>
                     </div>
                     <div>
                         <h2
                             class="text-2xl font-bold text-gray-900 dark:text-white mb-6 border-l-4 border-primary pl-4">
-                            Tools &amp; Technologies</h2>
+                            Ferramentas &amp; Infra</h2>
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z">
-                                    </path>
-                                </svg>
+                                <img src="./src/img/git.png">
                                 <p class="font-semibold text-gray-700 dark:text-gray-300">Git</p>
                             </div>
                             <div
                                 class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M236.55,149.42,194.05,120l42.5-29.42a8,8,0,0,0,0-13.16l-52-36a8,8,0,0,0-9.1,0L128,74.27,80.55,41.42a8,8,0,0,0-9.1,0l-52,36a8,8,0,0,0,0,13.16L62,120l-42.5,29.42a8,8,0,0,0,0,13.16l52,36a8,8,0,0,0,9.1,0L128,165.73l47.45,32.85a8,8,0,0,0,9.1,0l52-36a8,8,0,0,0,0-13.16ZM128,146.27,90.05,120l38-26.27L166,120Zm52-88.54L218,84,180,110.27,142.05,84Zm-104,0L114,84,76,110.27,38.05,84Zm0,124.54L38.05,156l38-26.27L114,156Zm104,0L142.05,156,180,129.73,218,156Zm-21.53,24.64a8,8,0,0,1-2,11.13l-23.89,16.54a8,8,0,0,1-9.1,0L99.56,218a8,8,0,0,1,9.1-13.16L128,218.27l19.34-13.39A8,8,0,0,1,158.47,206.91Z">
-                                    </path>
-                                </svg>
-                                <p class="font-semibold text-gray-700 dark:text-gray-300">Docker</p>
-                            </div>
-                            <div
-                                class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M248,168v32a8,8,0,0,1-16,0V187.31l-2.21,2.22C226.69,192.9,189.44,232,128,232c-62.84,0-100.38-40.91-101.95-42.65A8,8,0,0,1,38,178.65C38.27,179,72.5,216,128,216s89.73-37,90.07-37.36a3.85,3.85,0,0,1,.27-.3l2.35-2.34H208a8,8,0,0,1,0-16h32A8,8,0,0,1,248,168ZM160,94.53V84A36,36,0,0,0,91.92,67.64a8,8,0,0,1-14.25-7.28A52,52,0,0,1,176,84v92a8,8,0,0,1-16,0v-6.53a52,52,0,1,1,0-74.94ZM160,132a36,36,0,1,0-36,36A36,36,0,0,0,160,132Z">
-                                    </path>
-                                </svg>
-                                <p class="font-semibold text-gray-700 dark:text-gray-300">Cloud Services</p>
-                            </div>
-                            <div
-                                class="flex flex-col items-center justify-center p-4 bg-white/50 dark:bg-white/10 rounded-lg shadow-sm hover:shadow-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-300">
-                                <svg class="h-10 w-10 text-primary mb-2" fill="currentColor" viewBox="0 0 256 256"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm0,160H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.11A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,72,72Z">
-                                    </path>
-                                </svg>
-                                <p class="font-semibold text-gray-700 dark:text-gray-300">CI/CD</p>
+                                <img src="./src/img/aws.png">
+                                <p class="font-semibold text-gray-700 dark:text-gray-300">AWS Services</p>
                             </div>
                         </div>
                     </div>
@@ -293,103 +176,12 @@
         <main class="flex-1">
             <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto">
-                    <div class="mb-12 text-center">
-                        <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">My
-                            Projects</h1>
-                        <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-500 dark:text-slate-400">A selection of my
-                            recent work, showcasing my skills and experience in full-stack development.</p>
+                    <div id="projetos" class="mb-12 text-center">
+                        <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Meus Projetos</h1>
+                        <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-500 dark:text-slate-400">Uma Seleção de alguns dos Meus Projetos</p>
                     </div>
-                    <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
-                        <div
-                            class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-slate-800/50">
-                            <div class="relative h-56 w-full">
-                                <div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnR9Jg79iq0dpcCyxuZuwXSHiSUebuNbSEHLgHSrbD9zwla4FDKdhgvuQR0mtWjR7s5cJ3cX-WMsy6jT2RjNR4e6fdvPU38sn4Nd65elMBkUdoDsiyz6Y0TG9037VFNsZ6c4xII2Ivl0VqGaweBdcUCpuXNkGT1AamKyzM7Ocn_EIOPAeOxAEQddR_jHe2WM3jpQL5ps2NUxw-78b9rxgumj5uwwT9Oq7MrQzcY2RgJqEph9lFCEJwQg1nWHZmlXJ0eQBlGy_gVtI");'>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-xl font-semibold text-slate-800 dark:text-white">E-commerce Platform
-                                </h3>
-                                <p class="mt-2 flex-1 text-slate-600 dark:text-slate-300">A full-featured e-commerce
-                                    platform with user authentication, product catalog, shopping cart, and payment
-                                    gateway integration.</p>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">React</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Node.js</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Express</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">MongoDB</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-slate-800/50">
-                            <div class="relative h-56 w-full">
-                                <div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9qS7UygbRKpOzaWFYnA6it_CDpIWzMiKwCI2mzdMlren_8B3-KPckdnwOzbAsnKRcIJrl11c63Go8mYhbDFt0lRjvCfDlBIycJJ0gPKw5SLl96EY1O8JSzYo8ufQl9P_ta48NyUU2UQuZDSqQeL7X2bJ-9e18XibYHsb9E_kBtU6G-OYSfJebkTA90bmQtUvfQmdByvtNmrH0WSpyUF5ZusBRp9aoySM7GHaKwA3gsqk-AehsSPmkg4mt1JaWKLWCyamlU-bEJQA");'>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-xl font-semibold text-slate-800 dark:text-white">Social Media App</h3>
-                                <p class="mt-2 flex-1 text-slate-600 dark:text-slate-300">A social media application
-                                    with user profiles, posts, comments, and real-time updates.</p>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Vue.js</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Firebase</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Socket.io</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-slate-800/50">
-                            <div class="relative h-56 w-full">
-                                <div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApR7LRQGXm4nZdR0hZ2sabBzpyEJUsVZJ9KfvfWPzxuAenx5grV4jhcyBqmrN7SfmFVbRBFNjJwPA7c_14P9MUXMQLvmVv6CmNyQ_y1iCI1AOYnNcbnDzb_tdIRdJscxp3Z4KWAkFBpxD1yy4stwe1w0Yr0VtG3tXIzBKmY6TPvZvsePHLr4Dc3VuYywzcdaOA6D3yInv-pb7pn0LemwP7YlbKfnwgjS-r0DYLb0Ey33egNHiV3hFmvxyMrLgoWHvBeo89ePXq8fs");'>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-xl font-semibold text-slate-800 dark:text-white">Task Management System
-                                </h3>
-                                <p class="mt-2 flex-1 text-slate-600 dark:text-slate-300">A task management system with
-                                    user roles, project boards, task assignments, and progress tracking.</p>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Angular</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">.NET
-                                        Core</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-slate-800/50">
-                            <div class="relative h-56 w-full">
-                                <div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-105"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFGyBA3zG9vFkQzVmkXAYiADi433XqVOKJM6Uh2UVsopJ3KgLNhgfUWP0qUMj29CT4pcmZtV23g_xJZfOE9KECXQ5a6wc0TDIEhvKajXohdfLev4xdbAIf6i8-x5tW12rwaKtito9or_zTWLWx1ADvg2ftV-h3-7tWrEZh79FbXCSmZ8CTjnfve3DsOnYEErWZL_NNzK4VC4QeY7-4_VUvV3C72BBybRJbKXTIFUY91GD0CjN_GPZwRTqq5T484FqNw7_KShVDiBM");'>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-xl font-semibold text-slate-800 dark:text-white">Blog Website</h3>
-                                <p class="mt-2 flex-1 text-slate-600 dark:text-slate-300">A personal blog website with a
-                                    content management system, user comments, and social sharing features.</p>
-                                <div class="mt-4 flex flex-wrap gap-2">
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Next.js</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">GraphQL</span>
-                                    <span
-                                        class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Strapi</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="grid gap-8 md:grid-cols-2 lg:gap-12" id="divProjetos">
+                        
                     </div>
                     <div class="mt-16 flex items-center justify-center gap-2">
                         <a class="flex h-10 w-10 items-center justify-center rounded-full text-slate-500 hover:bg-slate-200 dark:text-slate-400 dark:hover:bg-slate-700"
@@ -421,51 +213,50 @@
     </div>
 
     <div class="flex flex-col min-h-screen">
-        
-        <main class="flex-grow container mx-auto px-6 py-12">
+
+        <main class="flex-grow container mx-auto px-6 py-12" id="contato">
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start">
                 <div class="space-y-6">
                     <div>
-                        <h1 class="text-4xl font-bold text-slate-900 dark:text-white">Get in Touch</h1>
+                        <h1 class="text-4xl font-bold text-slate-900 dark:text-white">Vamos conversar</h1>
                         <p class="mt-3 text-slate-600 dark:text-slate-400">
-                            I'm always open to discussing new projects, creative ideas, or opportunities to collaborate.
-                            Feel free to reach out, and I'll get back to you as soon as possible.
+                            Aberto a projetos freelancer e novas parcerias. Se tiver uma ideia ou projeto em mente, entre em contato e vamos transformar em realidade!
                         </p>
                     </div>
                     <div class="space-y-4">
                         <div>
                             <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
-                                for="name">Name</label>
+                                for="name">Nome</label>
                             <input
                                 class="form-input w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 focus:ring-primary focus:border-primary text-slate-700 dark:text-slate-300 placeholder-slate-400 dark:placeholder-slate-500"
-                                id="name" name="name" placeholder="Your Name" type="text" />
+                                id="name" name="name" placeholder="Seu Nome" type="text" />
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
                                 for="email">Email</label>
                             <input
                                 class="form-input w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 focus:ring-primary focus:border-primary text-slate-700 dark:text-slate-300 placeholder-slate-400 dark:placeholder-slate-500"
-                                id="email" name="email" placeholder="Your Email" type="email" />
+                                id="email" name="email" placeholder="Seu Email" type="email" />
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
-                                for="subject">Subject</label>
+                                for="subject">Assunto</label>
                             <input
                                 class="form-input w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 focus:ring-primary focus:border-primary text-slate-700 dark:text-slate-300 placeholder-slate-400 dark:placeholder-slate-500"
-                                id="subject" name="subject" placeholder="Subject" type="text" />
+                                id="subject" name="subject" placeholder="Assunto" type="text" />
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
-                                for="message">Message</label>
+                                for="message">Mensagem</label>
                             <textarea
                                 class="form-textarea w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 focus:ring-primary focus:border-primary text-slate-700 dark:text-slate-300 placeholder-slate-400 dark:placeholder-slate-500"
-                                id="message" name="message" placeholder="Your Message" rows="5"></textarea>
+                                id="message" name="message" placeholder="Sua Mensagem" rows="5"></textarea>
                         </div>
                         <div>
                             <button
                                 class="w-full py-3 px-4 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-all"
                                 type="submit">
-                                Send Message
+                                Enviar Email
                             </button>
                         </div>
                     </div>
@@ -474,7 +265,7 @@
                     <h2 class="text-xl font-semibold text-slate-800 dark:text-slate-200">Or connect with me on</h2>
                     <div class="space-y-4">
                         <a class="flex items-center gap-4 group p-4 rounded-lg bg-slate-100 dark:bg-slate-800/50 hover:bg-slate-200/70 dark:hover:bg-slate-800 transition-all"
-                            href="mailto:contact@alexportfolio.com">
+                            href="mailto:llucas@dev.com">
                             <div class="p-3 rounded-full bg-primary/20 dark:bg-primary/30 text-primary">
                                 <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -487,11 +278,11 @@
                                 <h3 class="font-semibold text-slate-800 dark:text-slate-200">Email</h3>
                                 <p
                                     class="text-sm text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
-                                    contact@alexportfolio.com</p>
+                                    llucas@dev.com</p>
                             </div>
                         </a>
                         <a class="flex items-center gap-4 group p-4 rounded-lg bg-slate-100 dark:bg-slate-800/50 hover:bg-slate-200/70 dark:hover:bg-slate-800 transition-all"
-                            href="#">
+                            href="https://www.linkedin.com/in/lucaslessagomes/">
                             <div class="p-3 rounded-full bg-primary/20 dark:bg-primary/30 text-primary">
                                 <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -504,11 +295,11 @@
                                 <h3 class="font-semibold text-slate-800 dark:text-slate-200">LinkedIn</h3>
                                 <p
                                     class="text-sm text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
-                                    /in/alex-developer</p>
+                                    in/lucaslessagomes/</p>
                             </div>
                         </a>
                         <a class="flex items-center gap-4 group p-4 rounded-lg bg-slate-100 dark:bg-slate-800/50 hover:bg-slate-200/70 dark:hover:bg-slate-800 transition-all"
-                            href="#">
+                            href="https://github.com/LLucasLessa">
                             <div class="p-3 rounded-full bg-primary/20 dark:bg-primary/30 text-primary">
                                 <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -521,7 +312,7 @@
                                 <h3 class="font-semibold text-slate-800 dark:text-slate-200">GitHub</h3>
                                 <p
                                     class="text-sm text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
-                                    /alex-dev</p>
+                                    /LLucasLessa</p>
                             </div>
                         </a>
                     </div>
@@ -530,12 +321,11 @@
         </main>
         <footer class="w-full mt-24">
             <div class="container mx-auto px-6 py-6 border-t border-slate-200 dark:border-slate-800">
-                <p class="text-center text-sm text-slate-500 dark:text-slate-400">© 2024 Alex's Portfolio. All rights
-                    reserved.</p>
+                <p class="text-center text-sm text-slate-500 dark:text-slate-400">© 2025 LLucas.dev . Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
