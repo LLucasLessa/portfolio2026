@@ -5,7 +5,7 @@ const projetos = [
         "id": 1,
         "imagem":"./src/img/WalletVisionPrototipo.png",
         "titulo":"Wallet Vision",
-        "descricao":"Sistema capás de controlar o fluxo de dinheiro de uma pessoa. Com o Wallet Vision vocé pode gerenciar suas financas de uma maneira simples e eficiente.",
+        "descricao":"Sistema capaz de controlar o fluxo de dinheiro de uma pessoa. Com o Wallet Vision vocé pode gerenciar suas financas de uma maneira simples e eficiente.",
         "tecnologias":["Next.js", "TailwindCSS", "PHP", "MySQL", "Java"],
         "pagina": 1,
         "modal": false
