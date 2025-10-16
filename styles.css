@@ -1,3 +1,9 @@
 a {
     behavior: smooth;
 }
+
+.disabled-link{
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+}
